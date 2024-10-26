@@ -97,7 +97,7 @@ const Reel = ({
             return (
               <div
                 key={index}
-                className="text-primary text-3xl font-semibold bg-slate-50 flex justify-center items-center"
+                className="text-primary text-xl font-semibold bg-slate-50 flex justify-center items-center"
                 style={{
                   flexGrow: 1,
                   width: "100%",

@@ -17,7 +17,7 @@ const Slot = ({ enableIndex, index, handleAnimationComplete }) => {
   const spinControl = useAnimationControls();
   const { gameStatus } = useNumberGame();
 
-  const [reelSize, setReelSize] = useState(160);
+  const [reelSize, setReelSize] = useState(150);
   const [isPlayed, setIsPlayed] = useState(false);
 
   useEffect(() => {
@@ -33,11 +33,11 @@ const Slot = ({ enableIndex, index, handleAnimationComplete }) => {
   return (
     <>
       <div>
-        <Row className=" gap-x-8">
+        <Row className=" gap-x-2">
           {/* -- */}
 
           {/* Ordinal Number */}
-          <h2 className="w-20 text-4xl text-secondary font-semibold">
+          <h2 className="w-16 text-2xl text-left text-secondary font-semibold">
             {getOrdinal(index + 1)}
           </h2>
 
@@ -61,7 +61,7 @@ const Slot = ({ enableIndex, index, handleAnimationComplete }) => {
                 index={index}
               />
             ) : (
-              <p className="w-full h-full text-primary text-3xl font-semibold bg-slate-50 flex justify-center items-center">
+              <p className="w-full h-full text-primary text-xl font-semibold bg-slate-50 flex justify-center items-center">
                 {displayWord}
               </p>
             )}
@@ -71,7 +71,7 @@ const Slot = ({ enableIndex, index, handleAnimationComplete }) => {
           <button
             disabled={!gameStatus || enableIndex !== index || isPlayed}
             onClick={() => spinControl.start("spin")}
-            className="w-28 text-2xl text-primary font-medium bg-secondary rounded-md shadow-lg shadow-supporting py-2 ml-6 disabled:bg-gray-400 transition-all duration-300 disabled:text-primary disabled:opacity-60 disabled:shadow-none disabled:cursor-not-allowed"
+            className="w-24 text-2xl text-primary font-medium bg-secondary rounded-md shadow-lg shadow-supporting py-2 ml-8 disabled:bg-gray-400 transition-all duration-300 disabled:text-primary disabled:opacity-60 disabled:shadow-none disabled:cursor-not-allowed"
           >
             Spin
           </button>

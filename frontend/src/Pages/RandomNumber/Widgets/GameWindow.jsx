@@ -117,7 +117,7 @@ const GameWindow = () => {
               transition={{
                 type: "spring",
               }}
-              className="text-primary text-2xl font-semibold bg-red rounded-xl py-2 absolute bottom-[56px]"
+              className="text-slate-50 text-2xl font-semibold tracking-widest bg-red rounded-md py-2 absolute bottom-[56px]"
             >
               Exit
             </motion.button>
