@@ -52,7 +52,13 @@ const GameWindow = () => {
 
   return (
     <>
-      <main className="w-full h-screen flex flex-col justify-center items-center relative">
+      <main
+        className="w-full flex flex-col justify-center items-center relative"
+        style={{
+          height: "100vh",
+          height: "100svh",
+        }}
+      >
         {/* --- */}
 
         {/* Slot Machine */}
