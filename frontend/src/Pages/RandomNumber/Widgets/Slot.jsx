@@ -20,14 +20,14 @@ const Slot = ({ enableIndex, index, handleAnimationComplete }) => {
   const spinControl = useAnimationControls();
   const { gameStatus, winnerList, totalWinners } = useNumberGame();
 
-  const [reelSize, setReelSize] = useState(150);
+  const [reelSize, setReelSize] = useState(140);
   const [isPlayed, setIsPlayed] = useState(false);
 
   useEffect(() => {
     setIsPlayed(false);
   }, [gameStatus]);
 
-  const displayWord = "---Roll!---";
+  const displayWord = "R0LL!";
 
   const played = (status) => {
     setIsPlayed(status);
