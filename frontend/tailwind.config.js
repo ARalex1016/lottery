@@ -6,10 +6,11 @@ export default {
       colors: {
         primary: "#00224D",
         secondary: "#FF204E",
-        supporting: "#A0153E",
+        neon: "#A0153E",
         supporting2: "#5D0E41",
         yellowOrange: "#FF9530",
-        red: "#FA291A",
+        red: "#FA0E0E",
+        green: "#0E9049",
       },
       borderRadius: {
         inherit: "inherit",

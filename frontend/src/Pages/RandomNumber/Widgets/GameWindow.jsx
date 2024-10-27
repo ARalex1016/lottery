@@ -21,10 +21,9 @@ const GameWindow = () => {
   const [enableIndex, setEnableIndex] = useState(null);
 
   useEffect(() => {
-    resetWinnerList();
-
     if (gameStatus) {
       setEnableIndex(totalWinners - 1);
+      resetWinnerList();
     }
   }, [gameStatus]);
 
@@ -47,6 +46,11 @@ const GameWindow = () => {
   };
 
   const handleAnimationComplete = () => {
+    if (enableIndex <= 0) {
+      setGameStatus((pre) => !pre);
+      return;
+    }
+
     setEnableIndex((pre) => pre - 1);
   };
 
@@ -92,9 +96,14 @@ const GameWindow = () => {
               transition={{
                 type: "spring",
               }}
-              className="text-3xl text-primary font-medium bg-yellowOrange rounded-md py-3 ml-6 absolute"
+              className="text-3xl text-secondary font-bold tracking-widest bg-primary border-2 border-secondary outline-none rounded-md py-3 absolute z-20"
+              style={{
+                textShadow: "0px 0px 4px #FF204E, -0px -0px 4px #FF204E",
+                boxShadow:
+                  "2px 2px 12px #FF204E, -2px -2px 12px #FF204E,inset 2px 2px 6px #FF204E,inset  -2px -2px 6px #FF204E",
+              }}
             >
-              {firstTime ? "Start" : "Restart"}
+              {firstTime ? "START" : "RESTART"}
             </motion.button>
           )}
         </AnimatePresence>
@@ -123,7 +132,10 @@ const GameWindow = () => {
               transition={{
                 type: "spring",
               }}
-              className="text-slate-50 text-2xl font-semibold tracking-widest bg-red rounded-md py-2 absolute bottom-[56px]"
+              className="text-slate-50 text-2xl font-bold tracking-widest bg-red rounded-md py-2 absolute bottom-[56px]"
+              style={{
+                boxShadow: "4px 4px 10px #ff14bd, -1px -1px 2px #ff14bd",
+              }}
             >
               Exit
             </motion.button>

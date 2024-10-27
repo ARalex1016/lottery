@@ -36,7 +36,7 @@ function App() {
         <Route path="/" element={<RandomNumber />} />
       </Routes>
 
-      <Toaster position={toastPosition} reverseOrder={false} />
+      <Toaster limit={3} position={toastPosition} reverseOrder={false} />
     </>
   );
 }

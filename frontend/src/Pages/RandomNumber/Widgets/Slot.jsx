@@ -11,11 +11,14 @@ import Row from "../../../Components/Row";
 import Reel from "./Reel";
 
 // Utils
-import { getOrdinal } from "../../../Utils/randomNameGame";
+import {
+  getOrdinal,
+  capitalizeFirstLetter,
+} from "../../../Utils/randomNameGame";
 
 const Slot = ({ enableIndex, index, handleAnimationComplete }) => {
   const spinControl = useAnimationControls();
-  const { gameStatus } = useNumberGame();
+  const { gameStatus, winnerList, totalWinners } = useNumberGame();
 
   const [reelSize, setReelSize] = useState(150);
   const [isPlayed, setIsPlayed] = useState(false);
@@ -62,7 +65,9 @@ const Slot = ({ enableIndex, index, handleAnimationComplete }) => {
               />
             ) : (
               <p className="w-full h-full text-primary text-xl font-semibold bg-slate-50 flex justify-center items-center">
-                {displayWord}
+                {winnerList.length > 0
+                  ? capitalizeFirstLetter(winnerList[totalWinners - 1 - index])
+                  : displayWord}
               </p>
             )}
           </div>

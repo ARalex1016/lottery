@@ -9,9 +9,10 @@ const useNumberGame = create((set) => ({
 
   resetWinnerList: () => set({ winnerList: [] }),
 
+  setGameStatus: () => set((state) => ({ gameStatus: !state.gameStatus })),
+
   setWinnerList: (winner) =>
     set((state) => ({ winnerList: [...state.winnerList, winner] })),
-  setGameStatus: () => set((state) => ({ gameStatus: !state.gameStatus })),
 
   setPlayerList: (nameList) => set({ playerList: nameList }),
 

@@ -138,7 +138,7 @@ const MenuSlider = () => {
                       totalPlayers < maxPlayer && addPlayer(1);
                     }}
                     disabled={gameStatus}
-                    className="w-6 aspect-square text-primary bg-slate-50 rounded-full transition-all duration-300 disabled:bg-gray-400 disabled:text-slate-50 disabled:opacity-80 disabled:cursor-not-allowed"
+                    className="w-6 aspect-square text-slate-50 bg-green shadow-sm shadow-gray-300 rounded-full transition-all duration-300 disabled:bg-gray-400 disabled:text-slate-50 disabled:opacity-80 disabled:cursor-not-allowed"
                   >
                     <Plus />
                   </button>
@@ -148,7 +148,7 @@ const MenuSlider = () => {
                       totalPlayers > minPlayer && minusPlayer(1);
                     }}
                     disabled={gameStatus}
-                    className="w-6 aspect-square bg-slate-50 rounded-full transition-all duration-300 disabled:bg-gray-400 disabled:text-slate-50 disabled:opacity-80 disabled:cursor-not-allowed"
+                    className="w-6 aspect-square text-red bg-slate-50 rounded-full transition-all duration-300 disabled:bg-gray-400 disabled:text-slate-50 disabled:opacity-80 disabled:cursor-not-allowed"
                   >
                     <Minus />
                   </button>
@@ -157,7 +157,7 @@ const MenuSlider = () => {
             </Column>
           </Row>
 
-          <p className="text-primary text-2xl font-semibold">
+          <p className="text-primary text-2xl bg-transparent  font-semibold">
             Fill Players Name
           </p>
 
@@ -171,8 +171,8 @@ const MenuSlider = () => {
                   value={playerNameList[index] || ""}
                   disabled={gameStatus}
                   onChange={(e) => handleInputChange(index, e)}
-                  placeholder="Enter Name"
-                  className="w-36 text-xl font-medium pl-4 py-2 rounded-md shadow-custom-inset border-none outline-none"
+                  placeholder="Player Name"
+                  className="w-36 text-base font-medium pl-4 py-2 rounded-md shadow-custom-inset border-none outline-none"
                 />
               );
             })}
