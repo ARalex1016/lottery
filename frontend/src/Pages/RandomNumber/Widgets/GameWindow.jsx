@@ -100,7 +100,7 @@ const GameWindow = () => {
               style={{
                 textShadow: "0px 0px 4px #FF204E, -0px -0px 4px #FF204E",
                 boxShadow:
-                  "2px 2px 12px #FF204E, -2px -2px 12px #FF204E,inset 2px 2px 6px #FF204E,inset  -2px -2px 6px #FF204E",
+                  "2px 2px 16px #FF204E, -2px -2px 16px #FF204E,inset 2px 2px 6px #FF204E,inset  -2px -2px 6px #FF204E",
               }}
             >
               {firstTime ? "START" : "RESTART"}
