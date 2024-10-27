@@ -182,16 +182,16 @@ const MenuSlider = () => {
           <button
             onClick={handleReset}
             disabled={gameStatus}
-            className="px-10 py-2 text-xl font-medium text-slate-50 bg-primary rounded-md shadow-md shadow-gray-500 transition-all duration-300 disabled:text-primary disabled:bg-gray-400 disabled:opacity-90"
+            className="px-10 py-2 text-xl font-medium text-slate-50 tracking-widest bg-primary rounded-md shadow-md shadow-gray-500 transition-all duration-300 disabled:text-primary disabled:bg-gray-400 disabled:opacity-90"
           >
-            Reset
+            RESET
           </button>
 
           {/* Open & Close Menu Toggle Button */}
           <motion.button
             onClick={handleToggleSlider}
             aria-expanded={isOpen}
-            className={`text-primary bg-slate-50 aspect-square rounded-full shadow-md shadow-slate-500 p-2 outline-none cursor-pointer hover:scale-105 absolute left-4`}
+            className={`text-primary bg-slate-50 aspect-square rounded-full shadow-md shadow-slate-500 p-2 outline-none cursor-pointer hover:scale-105 absolute z-30 left-4`}
             animate={{
               top: isOpen ? "100%" : "calc(100% + 10px)",
               translateY: isOpen && "-50%",

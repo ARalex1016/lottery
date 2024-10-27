@@ -14,8 +14,15 @@
 
 html {
   background-color: #00224d;
-  /* background-color: #31202b; */
+  /* background-color: black; */
   overflow: hidden;
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
